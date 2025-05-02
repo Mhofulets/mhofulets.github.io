@@ -3,51 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mhofulet Hub</title>
+    <title>Mhofulet Hub | Professional Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #00274d;
+            color: white;
             padding: 20px;
+            text-align: center;
         }
         .container {
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #00274d;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e6e6e6;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .contact {
+            background: #dfe6e9;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00274d;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 id="companyName"></h1>
-        <h2>About Us</h2>
-        <p id="companyDescription"></p>
-        <h3>Our Expertise</h3>
-        <ul id="expertiseList"></ul>
+
+<header>
+    <h1>Mhofulet Hub</h1>
+    <p>Private Company | Data Science, Software Development & Consultancy</p>
+</header>
+
+<div class="container">
+    <h2>About Us</h2>
+    <p>Mhofulet Hub is a dynamic and innovative entity specializing in data science, software development, and consultancy services. Our team is composed of analytic, energetic, and detail-oriented professionals with over 15 years of solid programming experience.</p>
+
+    <h2>Our Expertise</h2>
+    <ul>
+        <li>Scala, Java, Golang, Python</li>
+        <li>Agile and Waterfall methodologies</li>
+        <li>Hadoop/HDFS, Air-Flow Framework, Docker/Kubernetes, Cloud Formation</li>
+        <li>User requirements analysis and algorithm design</li>
+    </ul>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> 39 Ouderkraal Close, Noordwyk, Midrand, Gauteng, South Africa</p>
+        <p><strong>Phone:</strong> <a href="tel:+27815378020">+27 81 537 8020</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@mhofulet.africa">info@mhofulet.africa</a></p>
+        <p><strong>Website:</strong> <a href="http://mhofulet.africa" target="_blank">mhofulet.africa</a></p>
     </div>
+</div>
 
-    <script>
-        // JSON data
-        const companyData = {
-            "name": "Mhofulet Hub",
-            "type": "Private company",
-            "description": "Mhofulet Hub is a dynamic and innovative entity specializing in data science, software development, and consultancy services. Our team is composed of analytic, energetic, and detail-oriented professionals with over 15 years of solid programming experience.",
-            "expertise": [
-                "Scala, Java, Golang, Python",
-                "Agile and Waterfall methodologies",
-                "Hadoop/HDFS, Air-Flow Framework, Docker/Kubernetes, Cloud Formation",
-                "User requirements analysis and algorithm design"
-            ]
-        };
+<footer>
+    <p>&copy; 2025 Mhofulet Hub | All Rights Reserved</p>
+</footer>
 
-        // Injecting JSON data into HTML
-        document.getElementById("companyName").textContent = companyData.name;
-        document.getElementById("companyDescription").textContent = companyData.description;
-        const expertiseList = document.getElementById("expertiseList");
-        companyData.expertise.forEach(skill => {
-            const li = document.createElement("li");
-            li.textContent = skill;
-            expertiseList.appendChild(li);
-        });
-    </script>
 </body>
 </html>
+
