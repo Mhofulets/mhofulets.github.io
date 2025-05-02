@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mhofulet Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="companyName"></h1>
+        <h2>About Us</h2>
+        <p id="companyDescription"></p>
+        <h3>Our Expertise</h3>
+        <ul id="expertiseList"></ul>
+    </div>
+
+    <script>
+        // JSON data
+        const companyData = {
+            "name": "Mhofulet Hub",
+            "type": "Private company",
+            "description": "Mhofulet Hub is a dynamic and innovative entity specializing in data science, software development, and consultancy services. Our team is composed of analytic, energetic, and detail-oriented professionals with over 15 years of solid programming experience.",
+            "expertise": [
+                "Scala, Java, Golang, Python",
+                "Agile and Waterfall methodologies",
+                "Hadoop/HDFS, Air-Flow Framework, Docker/Kubernetes, Cloud Formation",
+                "User requirements analysis and algorithm design"
+            ]
+        };
+
+        // Injecting JSON data into HTML
+        document.getElementById("companyName").textContent = companyData.name;
+        document.getElementById("companyDescription").textContent = companyData.description;
+        const expertiseList = document.getElementById("expertiseList");
+        companyData.expertise.forEach(skill => {
+            const li = document.createElement("li");
+            li.textContent = skill;
+            expertiseList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
